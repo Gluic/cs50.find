@@ -17,17 +17,20 @@
 bool search(int value, int values[], int n)
 {
     // TODO: implement a searching algorithm
-    int x = 0;
+    int x = n\2;
     if (n <=0)
         return false;
     else
-        while (x )
-        {
-        
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n\2; i++)
             {
-                if (value == values[i])
+                if (value == values[x])
                     return true;
+                else
+                {
+                    if (value < values[x])
+                        x = x\2;
+                    x = x + (n - x)\2;
+                }
             }
      return false;
 }
